@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBMS Minecraft 服务器众筹建设中</title>
+    <!-- ICO 接口 -->
+    <link rel="icon" href="https://i.ibb.co/2MwyBhj/1727052525227.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://c10.patreonusercontent.com/4/patreon-media/p/campaign/12858258/624b7f9e2b414fd784ed6579bde77dc1/eyJ3IjoxNjAwLCJ3ZSI6MX0%3D/2.jpg?token-time=1728000000&token-hash=ucjUuI1QvhNy36V-ObFdeslQdzWYmoiqbXpDet9bbjA%3D'); /* 背景图片接口 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column; /* 纵向布局 */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: rgba(76, 175, 80, 0.6); /* 降低透明度 */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(8px); /* 适度模糊 */
+            width: 100%;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-direction: column; /* 改为纵向布局 */
+        }
+        .content {
+            max-width: 90%;
+            width: 800px;
+            background-color: rgba(255, 255, 255, 0.7); /* 使背景更透明 */
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px); /* 减少模糊效果 */
+            border-radius: 10px; /* 圆角 */
+            text-align: center; /* 文本居中 */
+        }
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(76, 175, 80, 0.6); /* 降低透明度 */
+            color: white;
+            backdrop-filter: blur(8px); /* 适度模糊 */
+            width: 100%;
+        }
+        /* 倒计时样式 */
+        #countdown {
+            font-size: 2em;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Minecraft 服务器众筹建设中</h1>
+</header>
+
+<div class="container">
+    <div class="content">
+        <h2>亲爱的Minecraft玩家们，</h2>
+        <p>我们的服务器正在紧锣密鼓地筹备中！为了打造一个高质量的Minecraft游戏世界，我们正在进行众筹，以便支付服务器租赁、插件开发、和网站维护等相关费用。</p>
+        <h3>为什么我们需要你的支持？</h3>
+        <p>通过你的捐赠，我们将能够为你提供更好的游戏体验，包括：</p>
+        <ul>
+            <li>更加流畅和稳定的服务器性能</li>
+            <li>更多特色插件和自定义玩法</li>
+            <li>专属的活动与奖励</li>
+        </ul>
+        <p>我们相信，在大家的支持下，这个服务器会成为一个独特的游戏社区，为每一位玩家带来无尽的乐趣。</p>
+        <h3>如何参与众筹？</h3>
+        <p>你可以点击下面的按钮来进行捐赠，任何金额都将帮助我们实现目标：</p>
+        <a href="https://patreon.com/WBMSSERVER?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" class="button">立即捐赠</a>
+        <p>期待与大家在服务器上相见！</p>
+
+        <!-- 倒计时区域 -->
+        <div id="countdown">服务器开服倒计时: </div>
+
+        <!-- Timeline 按钮 -->
+        <a href="timeline.html" class="button">查看时间线</a>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2024-2030 WBMS Minecraft 服务器 | 所有权利保留</p>
+</footer>
+
+<script>
+// 设置开服时间
+var launchDate = new Date("Feb 1, 2025 00:00:00").getTime();
+
+// 更新倒计时
+var countdownFunction = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = launchDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = "服务器开服倒计时: " + days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒 ";
+
+    // 如果倒计时结束
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "服务器已开服！";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>

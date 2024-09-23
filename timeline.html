@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间线 - WBMS Minecraft 伺服器</title>
+    <link rel="icon" href="https://i.ibb.co/2MwyBhj/1727052525227.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: rgba(76, 175, 80, 0.6);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 100px 0 50px;
+            padding: 20px;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Timeline 样式 */
+        .timeline-entry {
+            margin-bottom: 30px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .timeline-entry:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background-color: #4CAF50;
+        }
+
+        .timeline-entry .date-time {
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .timeline-entry .content {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-entry .content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .timeline-entry .content p {
+            margin: 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(76, 175, 80, 0.6);
+            color: white;
+            width: 100%;
+        }
+        .content img {
+            max-width: 100%;  /* 最大宽度为100%，确保图片不会超出其容器 */
+            height: auto;     /* 高度自动调整，保持图片的宽高比 */
+            display: block;   /* 使图片成为块级元素，避免底部有间隙 */
+            margin: 0 auto;   /* 水平居中 */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>伺服器开发时间线</h1>
+</header>
+
+<div class="container">
+    <div class="timeline" id="timeline">
+        <!-- 日志模板 -->
+        <div class="timeline-entry">
+            <div class="date-time">2024年9月23日 08:30</div>
+            <div class="content">
+                <h3>服务器筹备开始</h3>
+                <p>我们正式开始为WBMS伺服器进行筹备，包括官网重新开发，众筹页面，发出道歉公告以及伺服器重启公告。</p>
+                <img src="https://github.com/yuchen1204/picx-images-hosting/raw/master/20240923/1727052525227.2yybi8yvb3.webp" alt="some_text">
+            </div>
+        </div>
+        <!-- 模板结束 -->
+        <div class="timeline-entry">
+            <div class="date-time">2024年9月23日 09:46</div>
+            <div class="content">
+                <h3>伺服器硬件准备</h3>
+                <p>对伺服器的硬件进行选择，统计所需费用</p>
+            </div>
+        </div>
+
+        <!-- 在这里添加更多日志，复制并修改以上模板 -->
+    </div>
+</div>
+
+<footer>
+    <p>© 2024-2030 WBMS Minecraft 服务器 | 所有权利保留</p>
+</footer>
+
+</body>
+</html>
