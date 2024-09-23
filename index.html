@@ -90,13 +90,10 @@
             color: #4CAF50;
             margin-top: 20px;
         }
-        audio{
-            display: none;
-        }
     </style>
 </head>
 <body>
-    <audio autoplay="true" loop="loop" preload="auto" controls="autoplay" src="shared/file/music/C418.mp3"></audio>
+    <audio autoplay="true" loop="loop" preload="auto" controls="autoplay" src="shared/file/music/C418.mp3" style="display: none;"></audio>
 <header>
     <h1>Minecraft 服务器众筹建设中</h1>
 </header>
@@ -132,6 +129,12 @@
 </footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var audioElement = document.querySelector('audio');
+    audioElement.play().catch(function(error) {
+        console.log("音频播放失败:", error);
+    });
+});
 // 设置开服时间
 var launchDate = new Date("Feb 1, 2025 00:00:00").getTime();
 
