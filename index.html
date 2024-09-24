@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WBMS Minecraft 服务器众筹建设中</title>
-    <!-- ICO 接口 -->
     <link rel="icon" href="https://i.ibb.co/2MwyBhj/1727052525227.png" type="image/x-icon">
     <style>
         body {
@@ -13,44 +12,49 @@
             color: #333;
             margin: 0;
             padding: 0;
-            background-image: url('https://c10.patreonusercontent.com/4/patreon-media/p/campaign/12858258/624b7f9e2b414fd784ed6579bde77dc1/eyJ3IjoxNjAwLCJ3ZSI6MX0%3D/2.jpg?token-time=1728000000&token-hash=ucjUuI1QvhNy36V-ObFdeslQdzWYmoiqbXpDet9bbjA%3D'); /* 背景图片接口 */
+            background-image: url('https://c10.patreonusercontent.com/4/patreon-media/p/campaign/12858258/624b7f9e2b414fd784ed6579bde77dc1/eyJ3IjoxNjAwLCJ3ZSI6MX0%3D/2.jpg?token-time=1728000000&token-hash=ucjUuI1QvhNy36V-ObFdeslQdzWYmoiqbXpDet9bbjA%3D');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             display: flex;
-            flex-direction: column; /* 纵向布局 */
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             min-height: 100vh;
+            padding-top: 80px; /* 给页顶留出空间 */
+            padding-bottom: 60px; /* 给页底留出空间 */
         }
         header {
-            background-color: rgba(76, 175, 80, 0.6); /* 降低透明度 */
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            background-color: rgba(76, 175, 80, 0.6);
             padding: 20px;
             text-align: center;
             color: white;
-            backdrop-filter: blur(8px); /* 适度模糊 */
-            width: 100%;
+            backdrop-filter: blur(8px);
+            z-index: 1000; 
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
         }
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 100%;
-            flex-direction: column; /* 改为纵向布局 */
+            max-width: 800px;
+            margin: 0 auto; /* 水平居中 */
+            padding: 20px; /* 为容器内部添加内边距 */
         }
         .content {
             max-width: 90%;
             width: 800px;
-            background-color: rgba(255, 255, 255, 0.7); /* 使背景更透明 */
+            background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(4px); /* 减少模糊效果 */
-            border-radius: 10px; /* 圆角 */
-            text-align: center; /* 文本居中 */
+            backdrop-filter: blur(4px);
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px; /* 防止内容被页脚遮挡 */
+            z-index: 1; 
         }
         h2 {
             font-size: 2em;
@@ -77,12 +81,15 @@
             background-color: #45a049;
         }
         footer {
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
             text-align: center;
-            padding: 20px;
-            background-color: rgba(76, 175, 80, 0.6); /* 降低透明度 */
+            padding: 10px; 
+            background-color: rgba(76, 175, 80, 0.6);
             color: white;
-            backdrop-filter: blur(8px); /* 适度模糊 */
-            width: 100%;
+            width: 100%; 
+            z-index: 1000; 
         }
         /* 倒计时样式 */
         #countdown {
@@ -115,12 +122,9 @@
         <a href="https://patreon.com/WBMSSERVER?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" class="button">立即捐赠</a>
         <p>期待与大家在服务器上相见！</p>
 
-        <!-- 倒计时区域 -->
         <div id="countdown">服务器开服倒计时: </div>
-
-        <!-- Timeline 按钮 -->
         <a href="./timeline.html" class="button">查看时间线</a>
-
+        <a href="announcement.html" class="button">查看公告</a>
     </div>
 </div>
 
@@ -150,7 +154,6 @@ var countdownFunction = setInterval(function() {
 
     document.getElementById("countdown").innerHTML = "服务器开服倒计时: " + days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒 ";
 
-    // 如果倒计时结束
     if (distance < 0) {
         clearInterval(countdownFunction);
         document.getElementById("countdown").innerHTML = "服务器已开服！";

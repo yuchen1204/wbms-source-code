@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>时间线 - WBMS Minecraft 伺服器</title>
+    <title>时间线 - WBMS Minecraft 服务器</title>
     <link rel="icon" href="https://i.ibb.co/2MwyBhj/1727052525227.png" type="image/x-icon">
     <style>
         body {
@@ -11,6 +11,8 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            padding-top: 80px; /* 给页顶留出空间 */
+            padding-bottom: 60px; /* 给页底留出空间 */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -35,14 +37,13 @@
         .container {
             width: 100%;
             max-width: 800px;
-            margin: 100px 0 50px;
-            padding: 20px;
+            margin: 0 auto; /* 水平居中 */
+            padding: 20px; /* 为容器内部添加内边距 */
         }
 
+        /* 可选：可以为时间线容器添加垂直外边距 */
         .timeline {
-            position: relative;
-            margin: 0 auto;
-            padding: 20px 0;
+            margin: 20px 0; /* 在时间线的上下添加外边距 */
         }
 
         /* Timeline 样式 */
@@ -90,12 +91,17 @@
         }
 
         footer {
+            position: fixed; /* 固定在窗口底部 */
+            bottom: 0; /* 靠近底部 */
+            left: 0; /* 靠近左边 */
             text-align: center;
-            padding: 20px;
+            padding: 10px; /* 调整内边距 */
             background-color: rgba(76, 175, 80, 0.6);
             color: white;
-            width: 100%;
+            width: 100%; /* 确保宽度是100% */
+            z-index: 1000; /* 确保在其他元素之上 */
         }
+
         .content img {
             max-width: 100%;  /* 最大宽度为100%，确保图片不会超出其容器 */
             height: auto;     /* 高度自动调整，保持图片的宽高比 */
@@ -129,10 +135,10 @@
             <div class="content">
                 <h3>伺服器硬件准备</h3>
                 <p>对伺服器的硬件进行选择，统计所需费用</p>
-                <img src="https://github.com/yuchen1204/picx-images-hosting/raw/master/20240923/屏幕截图-2024-09-23-174125.3k7z4mlcui.webp" alt="硬件表"
+                <img src="https://github.com/yuchen1204/picx-images-hosting/raw/master/20240923/屏幕截图-2024-09-23-174125.3k7z4mlcui.webp" alt="硬件表"> <!-- 添加缺失的结束标签 -->
             </div>
         </div>
-        <div class="timeline-entry"></div>
+        <div class="timeline-entry">
             <div class="date-time">2024年9月24日 16:32</div>
             <div class="content">
                 <h3>服务端准备</h3>
